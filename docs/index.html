@@ -7,11 +7,11 @@
     <title>Redirect</title>
     <script>
         window.onload = function () {
-            const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+            const userAgent = navigator.userAgent;
 
             if (/android/i.test(userAgent)) {
                 window.location.replace('https://play.google.com/store/apps/details?id=com.android.chrome&hl=en');
-            } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+            } else if (/iPad|iPhone|iPod/.test(userAgent)) {
                 window.location.replace('https://apps.apple.com/en/app/google-chrome/id535886823');
             }
         }
